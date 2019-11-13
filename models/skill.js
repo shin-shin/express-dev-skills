@@ -1,6 +1,6 @@
 const fakeData = [
-    {student: 'Dustin', skills: 'guitar'},
-    {student: 'Irene', skills: 'dev skills'}
+    {student: 'Dustin', skills: ['guitar', 'dev skills', 'bike skills']},
+    {student: 'Irene', skills: ['dev skills', 'art', 'gardening']}
 ]
 
 module.exports = {

@@ -7,6 +7,11 @@
     <title>Skills page</title>
 </head>
 <body>
-    <h1>Dev skills of <%= skills.student %></h1>
+    <h1>Dev skills of <%= skill.student %></h1>
+    <ul>
+        <% skill.skills.forEach( s => { %>
+            <li><%= s %></li>
+        <% }) %>
+    </ul>
 </body>
 </html>
