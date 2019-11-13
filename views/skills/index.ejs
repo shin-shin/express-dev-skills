@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>Dev skills</h1>
-    
+    <ul>
+        <% skill.forEach((s, idx) => { %>
+
+        
+        <li>
+            <a href="/skills/<%= idx %>">
+            <%= s.student %>
+            </a>
+        </li>
+
+        <% }) %>
+    </ul>
 </body>
 </html>

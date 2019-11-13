@@ -4,13 +4,14 @@ const fakeData = [
 ]
 
 module.exports = {
-    getAll
+    getAll, 
+    getOne
 }
 
 function getAll(){
     return fakeData
 }
 
-function getOne(){
-    return fakeData
+function getOne(id){
+    return fakeData[id]
 }

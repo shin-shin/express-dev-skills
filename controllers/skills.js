@@ -11,6 +11,7 @@ function index(req, res) {
 }
 function show(req, res) {
     res.render('skills/show', {
-        skill: FakeData.getOne()
+        skill: FakeData.getOne(req.params.id),
+        skillNum: parseInt(req.params.id) + 1
     })
 }
