@@ -6,12 +6,15 @@ module.exports = {
 }
 function index(req, res) {
     res.render('skills/index', {
-        skill: FakeData.getAll()
+        skills: FakeData.getAll(),
+        title: "List of Students"
     })
 }
 function show(req, res) {
+    console.log(`request is ${FakeData.getOne(req.params.id.student)}`);
     res.render('skills/show', {
-        skill: FakeData.getOne(req.params.id),
-        student: FakeData.getOne(req.params.id.student)
+        studentSkills: FakeData.getOne(req.params.id).skills,
+        student: FakeData.getOne(req.params.id).student,
+        title: `Skills of ${FakeData.getOne(req.params.id).student}`
     })
 }

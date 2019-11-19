@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skills page</title>
-</head>
-<body>
-    <h1>Dev skills</h1>
-    <ul>
-        <% skill.forEach((s, idx) => { %>
+<%- include('../partials/header') %>
 
-        
-        <li>
-            <a href="/skills/<%= idx %>">
+<h1>Dev skills</h1>
+<ul>
+    <% skills.forEach((s, idx) => { %>
+
+
+    <li>
+        <a href="/skills/<%= idx %>">
             <%= s.student %>
-            </a>
-        </li>
+        </a>
+    </li>
 
-        <% }) %>
-    </ul>
-</body>
-</html>
+    <% }) %>
+</ul>
+<%- include('../partials/footer') %>
