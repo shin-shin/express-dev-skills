@@ -6,6 +6,7 @@ module.exports = {
     new: newSkill,
     create: createSkill,
     delete: deleteSkill,
+    edit,
     update
 }
 function index(req, res) {
@@ -46,12 +47,29 @@ function createSkill(req, res) {
 
 
 function deleteSkill(req, res){
-    let obj = FakeData.getOne(req.params.id)
+    let obj = FakeData.getOne(req.params.id);
     obj.skills.splice(req.params.idx, 1);
-    res.redirect(`/skills/${req.params.id}`)
+    res.redirect(`/skills/${req.params.id}`);
+}
+
+function edit(req, res){
+    let obj = FakeData.getOne(req.params.id);
+    res.render('skills/edit', {
+        title: `Edit one of ${obj.student}'s Skills`,
+        idx: req.params.idx,
+        studentId: req.params.id,
+        skill: obj.skills[req.params.idx].skill,
+        acquired: obj.skills[req.params.idx].acquired,
+
+    })
+    //res.send('UPDATE')
+
 }
 
 function update(req, res){
+    let obj = FakeData.getOne(req.params.id)
+    obj.skills.splice(req.params.idx, 1, req.body);
     
     res.redirect(`/skills/${req.params.id}`)
+
 }

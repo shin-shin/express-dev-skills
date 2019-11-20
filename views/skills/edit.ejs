@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<form action="/skills/<%= studentId %>/edit/<%= idx %>?_method=PUT" method="POST">
+    <label>Edit Skill:
+        <input type="text" name="skill" value="<%= skill %>">
+    </label>
+    <label>Aquired:
+        <select name="acquired">
+            <option value="true">
+                yes
+            </option>
+            <option value="false">
+                no
+            </option>
+        </select>
+    </label>
+
+    <input class="btn" type="submit" value="Edit Skill">
+
+</form>
+
+<%- include('../partials/footer') %>

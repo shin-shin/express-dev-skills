@@ -4,7 +4,7 @@
     <thead>
         <th>Skill</th>
         <th>Acquired</th>
-        <!-- <th>Edit</th> -->
+        <th>Edit</th>
         <th>Delete</th>
     </thead>
     <tbody>
@@ -12,7 +12,7 @@
         <tr>
             <td><%= s.skill %></td>
             <td><%= s.acquired %></td>
-            <!-- <td><a href="/skills/<%= studentId %>/edit/<%= idx %>">Edit</a></td> -->
+            <td><a href="/skills/<%= studentId %>/edit/<%= idx %>">Edit</a></td>
             <td><a href="/skills/<%= studentId %>/delete/<%= idx %>">Delete</a></td>
         </tr>
         <% }) %>
