@@ -1,22 +1,24 @@
 <%- include('../partials/header') %>
 
-<h1>Dev skills of <%= student %></h1>
 <table>
     <thead>
         <th>Skill</th>
         <th>Acquired</th>
-        <th>Edit</th>
+        <!-- <th>Edit</th> -->
+        <th>Delete</th>
     </thead>
     <tbody>
-        <% studentSkills.forEach( s => { %>
+        <% studentSkills.forEach( (s, idx) => { %>
         <tr>
             <td><%= s.skill %></td>
             <td><%= s.acquired %></td>
-            <td><a href="#">Edit</a></td>
+            <!-- <td><a href="/skills/<%= studentId %>/edit/<%= idx %>">Edit</a></td> -->
+            <td><a href="/skills/<%= studentId %>/delete/<%= idx %>">Delete</a></td>
         </tr>
         <% }) %>
     </tbody>
 </table>
 
+<a class="btn" href="/skills/<%= studentId %>/new">Add Skill</a>
 
 <%- include('../partials/footer') %>

@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -22,4 +25,41 @@ table td, table th{
 
 table tr:nth-child(even), table thead {
   background-color: #def2fa;
+}
+
+a.btn {
+  background-color: #00B7FF;
+  color: white;
+  padding: 12px;
+  border-radius: .3rem;
+  text-decoration: none;
+  margin: .5rem 0;
+  display: inline-block;
+}
+input.btn {
+  background-color: #00B7FF;
+  color: white;
+  padding: 12px;
+  border: 0;
+  width: auto;
+  border-radius: .3rem;
+  text-decoration: none;
+  margin: .5rem 0;
+  display: inline-block;
+  font-size: 15px;
+}
+form label{
+  display: block;
+  margin: 20px 0;
+}
+form input {
+  font-size: 14px;
+  width: calc(80vw - 70px);
+  border-radius: 5px;
+  border: 1px solid #d3d2d2;
+  padding: 5px 10px;
+}
+form select {
+  font-size: 14px;
+  margin-left:10px ;
 }

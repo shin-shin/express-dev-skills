@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<form action="/skills/<%= studentId %>/new" method="POST">
+    <label>New Skill:
+        <input type="text" name="skill">
+    </label>
+    <label>Aquired:
+        <select name="acquired">
+            <option value="true">
+                yes
+            </option>
+            <option value="false">
+                no
+            </option>
+        </select>
+    </label>
+
+    <input class="btn" type="submit" value="Add Skill">
+
+</form>
+
+<%- include('../partials/footer') %>
